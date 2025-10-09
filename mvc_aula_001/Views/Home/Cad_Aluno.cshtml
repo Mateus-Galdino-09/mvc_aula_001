@@ -1,0 +1,24 @@
+﻿@using mvc_aula_001.Models;
+
+@model CAluno;
+
+@{
+    ViewData["Title"] = "Cad_Aluno";
+}
+
+<h1>Cad_Aluno</h1>
+<form method="post">
+    <input type="text" name="nome" />
+    <input type="text" name="sobrenome" />
+    <input type="number" name="idade" />
+    <input type="number" name="NumeroMatricula" />
+
+    <button type="submit">enviar</button>
+</form>
+
+<h1>Banco de dados do Cadastro Aluno :</h1>
+
+<p>nome:@Model.nome<p>
+<p>sobrenome: @Model.sobrenome</p>
+<p>idade :@Model.idade</p>
+<p>numero matricula :@Model.NumeroMatricula</p> 

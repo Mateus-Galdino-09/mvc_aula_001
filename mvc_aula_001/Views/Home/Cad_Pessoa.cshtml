@@ -1,0 +1,19 @@
+﻿@using mvc_aula_001.Models;
+
+@model CPessoa;
+
+@{
+    ViewData["Title"] = "Cad_Pessoa";
+}
+
+<h1>Qual e seu nome?</h1>
+
+<form method="post">
+    <input type="text" name="nome" placeholder="Digite seu nome aqui"/>
+  
+    <button type="submit">enviar</button>
+</form>
+
+<h1>Banco de Dados de Cadastro de Pessoas :</h1>
+
+<p>@Model.nome @Model.sobrenome @Model.idade</p>

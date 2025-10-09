@@ -1,0 +1,26 @@
+﻿@using mvc_aula_001.Models;
+
+@model RBib;
+
+
+@{
+    ViewData["Title"] = "Reg_Bib";
+}
+
+<h1>Reg_Bib</h1>
+<form method="post">
+    <input type="text" name="TituloLivro" />
+    <input type="text" name=" NomeAutor" />
+    <input type="number" name="AnoPublicacao" />
+    <input type="number" name="NumeroPaginas" />
+
+    <button type="submit">enviar</button>
+
+</form>
+
+<h1>Registro dos Dados da Biblioteca: </h1>
+
+<p>Titulo do Livro : @Model.TituloLivro</p>
+<p>Nome Autor : @Model.NomeAutor</p>
+<p>Ano Publicacao : @Model.AnoPublicacao</p>
+<p>Numero de Paginas : @Model.NumeroPaginas</p>
