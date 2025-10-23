@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using get_post_teste.Models;
+using Carro.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace get_post_teste.Controllers
+namespace Carro.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,18 +13,19 @@ namespace get_post_teste.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(string nome, string sobrenome)
-        {
-            ViewBag.NomeUsuario = nome;
-            ViewBag.SobrenomeUsuario = sobrenome;
-            return View("VisualizarNome");
+        public IActionResult Index(int ano, string modelo, float preco )
+        { 
+            ViewBag.ano = ano;
+            ViewBag.modelo = modelo;
+            ViewBag.preco = preco;
+            return View("VisualizarCarro");
         }
         
+
         public IActionResult Privacy()
         {
             return View();
         }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

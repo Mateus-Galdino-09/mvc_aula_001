@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Excluir usuario</h1>
+
+<div class="text-center">
+
+    <form method="post" action="Excluir">
+        <label>Id:</label>
+        <input type="number" name="id" />
+        <label>Usuario:</label>
+        <input type="text" name="usuario" />
+        <label>Senha:</label>
+        <input type="password" name="senha" />
+        <button action="submit">Excluir</button>
+
+    </form>
+</div>
+
+<p>@ViewData["Message"]</p>
+
